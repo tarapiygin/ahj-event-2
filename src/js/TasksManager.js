@@ -31,7 +31,8 @@ export default class TasksManager {
     const task = this.storage.tasks[index];
     task.pinned = checked;
     this.storage.saveTasks();
-    this.UIManager.drawAllTasks(this.storage.findTasks(this.activeFilter));
+    if (this.activeFilter !== '') this.UIManager.drawAllTasks(this.storage.findTasks(this.activeFilter));
+    else this.UIManager.drawAllTasks(this.storage.getUnPinnedTasks());
     this.UIManager.drawPinnedTasks(this.storage.getPinnedTasks());
   }
 
