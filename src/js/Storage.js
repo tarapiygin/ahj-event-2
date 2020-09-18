@@ -5,7 +5,7 @@ export default class Storage {
 
   addTask(task) {
     this.tasks.push(task);
-    this.saveTasks();
+    return this.tasks.length - 1;
   }
 
   findTasks(string) {
