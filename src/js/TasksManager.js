@@ -19,6 +19,7 @@ export default class TasksManager {
     if (taskName !== '') {
       const task = new Task(taskName);
       task.index = this.storage.addTask(task);
+      this.activeFilter = '';
       this.storage.saveTasks();
       this.UIManager.drawAllTasks(this.storage.getUnPinnedTasks());
     } else {
