@@ -1,0 +1,1 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/kwfwlhnh0ro4r7xv?svg=true)](https://ci.appveyor.com/project/tarapiygin/ahj-event-2)
